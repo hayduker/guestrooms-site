@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Questrial', sans-serif;
+    background-color: #666;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-height: 100vh;
+    margin: 0;
+    position: relative;
+}
+
+.fullscreen-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+  }
+  
+  .fullscreen-bg__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  @media (min-aspect-ratio: 16/9) {
+    .fullscreen-bg__video {
+      height: 300%;
+      top: -100%;
+    }
+  }
+  
+  @media (max-aspect-ratio: 16/9) {
+    .fullscreen-bg__video {
+      width: 300%;
+      left: -100%;
+    }
+  }
+/*   
+  @media (max-width: 767px) {
+    .fullscreen-bg {
+      background: url('../img/videoframe.jpg') center center / cover no-repeat;
+    }
+  
+    .fullscreen-bg__video {
+      display: none;
+    }
+  } */
+
+.tint {
+    background-color: aqua;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1;
+}
+
+.content-container {
+    z-index: 2;
+}
+
+h1 {
+    font-family: Helvetica Neue;
+    color: #ddd;
+    font-weight: 300;
+    font-size: 80px;
+    margin-bottom: 30px;
+    letter-spacing: .1em;
+    z-index: 3;
+}
+
+p {
+    font-family: Helvetica Neue;
+    color: #ddd;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    z-index: 4;
+}
+
+.links-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.links-container a {
+    background: #ddd;
+    border-radius: 50%;
+    height: 34px;
+    width: 34px;
+    margin: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.links-container a:hover {
+    background: #c4c4c4;
+}
+
+.links-container a i {
+    color: #333;
+    font-size: 22px;
+}
+
+@media (max-width: 800px) {
+    .screen,
+    .controls {
+        width: 100%;
+    }
+}
