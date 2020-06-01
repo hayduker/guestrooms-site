@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: 'Questrial', sans-serif;
+    font-family: Helvetica Neue;
     background-color: #666;
     display: flex;
     flex-direction: column;
@@ -65,12 +65,15 @@ body {
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.35);
     z-index: 1;
 }
 
 .content-container {
     z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 h1 {
@@ -83,11 +86,50 @@ h1 {
     z-index: 3;
 }
 
+h1.header-two-line {
+     display: none;
+}
+
 p {
     font-family: Helvetica Neue;
     color: #ddd;
     font-weight: 300;
     font-size: 20px;
+}
+
+.music-player {
+    margin-top: 100px;
+}
+
+.song-title {
+    padding-left: 20px;
+    margin: 0;
+    font-size: 14px;
+    font-style: italic;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.action-btn {
+    border: 0;
+    background: none;
+    color: #ddd;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 0;
+    margin: 10px 20px;
+}
+
+.action-btn:hover {
+    color: #ad6f46;
+}
+
+.action-btn-big {
+    font-size: 30px;
 }
 
 .footer {
@@ -117,7 +159,7 @@ p {
 }
 
 .links-container a:hover {
-    background: #c4c4c4;
+    background: #ad6f46;
 }
 
 .links-container a i {
@@ -125,9 +167,21 @@ p {
     font-size: 22px;
 }
 
-@media (max-width: 800px) {
-    .screen,
-    .controls {
-        width: 100%;
+@media (max-width: 600px) {
+    h1 {
+        font-size: 60px;
+        margin-bottom: 0;
+    }
+
+    h1.header-one-line {
+        display: none;
+    }
+
+    h1.header-two-line {
+        display: block;
+    }
+
+    .music-player {
+        margin-top: 80px;
     }
 }
