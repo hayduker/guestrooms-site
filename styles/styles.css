@@ -127,6 +127,10 @@ body {
     color: #ad6f46;
 }
 
+.action-btn:focus {
+    outline: 0;
+}
+
 .footer {
     position: fixed;
     bottom: 0;
