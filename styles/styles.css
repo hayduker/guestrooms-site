@@ -70,31 +70,28 @@ body {
 }
 
 .content-container {
+    margin-top: 50px;
     z-index: 2;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-h1 {
-    font-family: Helvetica Neue;
-    color: #ddd;
-    font-weight: 300;
-    font-size: 80px;
-    margin-bottom: 30px;
-    letter-spacing: .1em;
-    z-index: 3;
+.logo {
+    max-width: 740px;
+    height: auto;
 }
 
-h1.header-two-line {
-     display: none;
+.logo-word {
+    display: none;
 }
 
-p {
+.subtitle {
     font-family: Helvetica Neue;
     color: #ddd;
     font-weight: 300;
     font-size: 20px;
+    margin: 0;
 }
 
 .music-player {
@@ -102,8 +99,10 @@ p {
 }
 
 .song-title {
+    font-family: Helvetica Neue;
     padding-left: 20px;
     margin: 0;
+    color: #ddd;
     font-size: 14px;
     font-style: italic;
 }
@@ -167,21 +166,65 @@ p {
     font-size: 22px;
 }
 
+@media (max-width: 800px) {
+    .content-container {
+        margin-top: 0;
+        position: absolute;
+        top: 50vh;
+        transform: translateY(-75%);
+    }
+    
+    .logo {
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 700px) {
+    .content-container {
+        margin-top: 0;
+        position: absolute;
+        top: 50vh;
+        transform: translateY(-75%);
+    }
+
+    .logo {
+        max-width: 500px;
+    }
+}
+
+
 @media (max-width: 600px) {
-    h1 {
-        font-size: 60px;
-        margin-bottom: 0;
+    .content-container {
+        margin-top: 0;
+        position: absolute;
+        top: 50vh;
+        transform: translateY(-65%);
     }
 
-    h1.header-one-line {
-        display: none;
+    .logo {
+        max-width: 400px;
     }
 
-    h1.header-two-line {
-        display: block;
+    .subtitle {
+        font-size: 18px;
     }
 
     .music-player {
         margin-top: 80px;
+    }
+}
+
+@media (max-width: 450px) {
+    .logo {
+        display: none;
+    }
+
+    .logo-word {
+        display: block;
+        max-width: 50%;
+    }
+
+    .subtitle {
+        margin-top: 20px;
     }
 }
