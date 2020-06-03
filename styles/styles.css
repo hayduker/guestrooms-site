@@ -117,7 +117,7 @@ body {
     border: 0;
     background: none;
     color: #ddd;
-    font-size: 20px;
+    font-size: 100px;
     cursor: pointer;
     padding: 0;
     margin: 10px 20px;
@@ -125,10 +125,6 @@ body {
 
 .action-btn:hover {
     color: #ad6f46;
-}
-
-.action-btn-big {
-    font-size: 30px;
 }
 
 .footer {
@@ -226,5 +222,9 @@ body {
 
     .subtitle {
         margin-top: 20px;
+    }
+
+    .action-btn {
+        font-size: 75px;
     }
 }
