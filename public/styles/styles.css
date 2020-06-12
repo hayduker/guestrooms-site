@@ -33,9 +33,9 @@ body {
     height: 100%;
   }
 
-  /* .fullscreen-bg__video.mobile {
+  .fullscreen-bg__video.mobile {
       display: none;
-  } */
+  }
   
   @media (min-aspect-ratio: 16/9) {
     .fullscreen-bg__video {
@@ -239,13 +239,12 @@ body {
     .fullscreen-bg__video {
         background-image: url('../img/mobile.png');
     }
-
-    /* 
+    
     .fullscreen-bg__video.full {
         display: none;
     }
 
     .fullscreen-bg__video.mobile {
         display: block;
-    } */
+    }
 }
